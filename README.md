@@ -49,6 +49,69 @@ So, the results looks like below.
 
 ![sample](./output_images/sampling.png)
 
+These are all implements at doit.ipynb.
+
 ## HOG(Histogram of Oriented Gradients)
 
+First, I referenced Udacity's Lecture 29(HOG Classify).
+Above I mentioned 70% for training, 20% for verifying, and 10% for testing.
+I implement it with np.random.randint().
+So this dataset was shuffled!
+I tried to various colorspace and I choice HLS.
+I select orientations for '9', pixels_per_cell for '(8, 8)', and cells_per_block for '(2, 2)'.
+Here is my Vehicle results using HLS Color Space and above HOG parameters.
 
+![HOG_Vehicle](./output_images/3.png)
+
+And below is my Non-Vehicle results.
+
+![HOG_Non_Vehicle](./output_images/4.png)
+
+This part also exist at doit.ipynb.
+
+
+
+## Why choice HLS and HOG parameter ?
+
+I decide to remove RGB Color Space.
+Because of most of prior project has illumination problem.
+So, I have to remove this problem.
+I can get good results at HSV, HLS like below.
+
+![HSV](./output_images/HSV.png)
+
+And HLS looks like this.
+
+![HLS](./output_images/HLS.png)
+
+They have also similar results.
+So I think I can use these two(HSV, and HLS) all.
+Anyway, I select HLS.
+Because of Accuracy, so I select pixels_per_cell for (8, 8).
+When I select (16, 16) then it has not so good Accuracy.
+And cells_per_block is same reason.
+That's the reason I select these values.
+
+
+
+## SVM Based Classifier
+
+I use SVM for training with 'svc = LinearSVC()'.
+Training with 'svc.fit()' and predict with 'svc.predict()'.
+I use all HLS three channels for reducing accuracy decrease.
+However it still has problem that is same as fourth project(illumination).
+It makes False Positive problem.
+So, I'll remove it with Thresholding technique.
+But, I also mentioned prior project, Thresholding technique is bad on illumination problem.
+I'll modify it at future.
+
+
+
+## Sliding Window
+
+First, I referenced Udacity's Lecture 32(Sliding Window Implementation).
+I can make below windows.
+
+![somanywindow](./output_images/5.png)
+
+It makes big problem.
