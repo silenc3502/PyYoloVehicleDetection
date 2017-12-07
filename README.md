@@ -33,4 +33,22 @@ Here are links to the labeled data for [vehicle](https://s3.amazonaws.com/udacit
 
 ## Data Exploration
 
+First, I referenced Udacity's Lecture 19(Data Exploration).
+Then I can implement results like below.
+This image means the Vehicles.
+
+![vehicles](./output_images/1.png)
+
+And next image means the Non-Vehicles.
+
+![non_vehicles](./output_images/2.png)
+
+After I'm making some samples of training, verifying, and testing.
+I used 70% data for training, 20% data for verifying and 10% for testing.
+So, the results looks like below.
+
+![sample](./output_images/sampling.png)
+
+## HOG(Histogram of Oriented Gradients)
+
 
