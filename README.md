@@ -114,4 +114,70 @@ I can make below windows.
 
 ![somanywindow](./output_images/5.png)
 
-It makes big problem.
+However, it can makes big problem.
+First big problem is performance(So many operations for process all window).
+So, I changed range of it like below.
+
+![trick](./output_images/6.png)
+
+I can remove left side False Positive and get performance.
+However it can remove right side False Positive and the other False Positive and False Negative problem.
+I can search Vehicles like this.
+This is the Thresholding technique.
+I referenced Udacity's Lecture 37(Multiple Detections & False Positives).
+There are apply_threshold() function can adjust Threshold for detect Vehicles.
+Below is the results.
+
+![search_vehicle](./output_images/8.png)
+
+However it still has False Positive like this.
+
+![false_positive](./output_images/10.png)
+
+
+
+## Video Simulation
+
+I used all techniques above I mentioned.
+So I can get the results of project_video.mp4 like this.
+
+![result1](./output_images/result1.gif)
+
+I tried it to my Country Road.
+However the result was terrible.
+
+![result2](./output_images/result2.gif)
+
+
+
+## Discussion(Weakness of these mechanism)
+
+My implement has big weakness about vehicles direction.
+I remove left side sliding window.
+So if the Vehicle comes from left then it can't detect the Vehicles.
+And it still has False Positive Problem.
+I'll improve this problem with YOLO and Image Filter.
+
+
+
+## Future Works
+
+I have plan to improve this project with YOLO.
+I failed to implement it with YOLO.
+So I have below plan.
+
+1. Implement this project with YOLO.
+2. Porting it to my TI AM5728 Board with C/C++ Based OpenCL.
+   (It can use many CPUs, DSPs, and GPUs)
+
+
+
+## References
+
+1. https://github.com/JunshengFu/vehicle-detection
+2. https://github.com/gliese581gg/YOLO_tensorflow
+3. https://github.com/diyjac/SDC-P5
+4. https://github.com/balancap/SDC-Vehicle-Detection
+5. https://github.com/xslittlegrass/CarND-Vehicle-Detection
+6. https://github.com/pjreddie/darknet/wiki/YOLO:-Real-Time-Object-Detection
+7. https://github.com/tatsuyah/vehicle-detection
