@@ -174,10 +174,4 @@ So I have below plan.
 
 ## References
 
-1. https://github.com/JunshengFu/vehicle-detection
-2. https://github.com/gliese581gg/YOLO_tensorflow
-3. https://github.com/diyjac/SDC-P5
-4. https://github.com/balancap/SDC-Vehicle-Detection
-5. https://github.com/xslittlegrass/CarND-Vehicle-Detection
-6. https://github.com/pjreddie/darknet/wiki/YOLO:-Real-Time-Object-Detection
-7. https://github.com/tatsuyah/vehicle-detection
+1. Udacity's Lecture
